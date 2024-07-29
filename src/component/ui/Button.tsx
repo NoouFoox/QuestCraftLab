@@ -15,9 +15,9 @@ export default function Button(props: ButtonProps) {
         <button
           className={clsx(
             "rounded-lg m-1 py-2 px-4 text-sm text-white",
-            !hover && !active && "bg-indigo-900",
-            hover && !active && "bg-indigo-700",
-            active && "bg-indigo-500"
+            !hover && !active && "bg-gray-700",
+            hover && !active && "bg-gray-700  outline-white",
+            active && "bg-gray-500"
           )}
         >
           {props.children}
