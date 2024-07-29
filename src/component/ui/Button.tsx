@@ -14,10 +14,10 @@ export default function Button(props: ButtonProps) {
       {({ hover, active }) => (
         <button
           className={clsx(
-            "rounded py-2 px-4 text-sm text-white",
-            !hover && !active && "bg-sky-600",
-            hover && !active && "bg-sky-500",
-            active && "bg-sky-700"
+            "rounded-lg m-1 py-2 px-4 text-sm text-white",
+            !hover && !active && "bg-indigo-900",
+            hover && !active && "bg-indigo-700",
+            active && "bg-indigo-500"
           )}
         >
           {props.children}

@@ -7,10 +7,12 @@ export default function useDark() {
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      setTheme('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      setTheme('light');
     }
-  }, []);
+  },[theme]);
   const changeTheme = (theme: Theme) => {
     setTheme(theme);
     if (theme === 'light') {
@@ -21,8 +23,8 @@ export default function useDark() {
       localStorage.setItem('theme', 'dark');
     }
   }
-  return [
+  return {
     theme,
     changeTheme
-  ]
+  }
 }
