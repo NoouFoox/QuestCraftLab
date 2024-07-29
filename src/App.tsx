@@ -1,8 +1,5 @@
 import { useTranslation } from "react-i18next";
-const lngs: { [key: string]: { nativeName: string } } = {
-  "en-US": { nativeName: "English" },
-  "zh-CN": { nativeName: "中文" },
-};
+import lngs from "./i18n/lngs";
 function App() {
   const { t, i18n } = useTranslation();
   return (
@@ -23,7 +20,7 @@ function App() {
           />
         ))}
       </select>
-      <h1>{t("welcome")}</h1>
+      <h1>{t('welcome')}</h1>
     </div>
   );
 }
