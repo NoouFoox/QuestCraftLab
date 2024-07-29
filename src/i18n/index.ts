@@ -3,6 +3,9 @@ import { initReactI18next } from "react-i18next";
 import en_US from '../../lang/en-US.json';
 import zh_CN from '../../lang/zh-CN.json';
 import zh_HK from '../../lang/zh-HK.json';
+const lation = (translation:Record<string,string>) => ({
+  translation
+})
 i18next
   .use(initReactI18next)
   .init({
@@ -12,14 +15,8 @@ i18next
       escapeValue: false,
     },
     resources: {
-      'en-US': {
-        translation: en_US
-      },
-      'zh-CN': {
-        translation: zh_CN
-      },
-      'zh-HK': {
-        translation: zh_HK
-      }
+      'en-US': lation(en_US),
+      'zh-CN': lation(zh_CN),
+      'zh-HK': lation(zh_HK)
     }
   })
