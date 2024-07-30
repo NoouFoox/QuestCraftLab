@@ -1,3 +1,7 @@
 {
-  "welcome": "歡迎"
+  "welcome": "歡迎",
+  "theme":{
+    "dark": "暗",
+    "light": "亮"
+  }
 }

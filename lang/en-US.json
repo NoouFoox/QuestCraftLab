@@ -1,3 +1,7 @@
 {
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "theme":{
+    "dark": "Dark",
+    "light": "Light"
+  }
 }
