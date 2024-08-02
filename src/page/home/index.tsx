@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/system/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { t } from "i18next";
 import yaml from "js-yaml";
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <div>
       <Button>按钮</Button>
+      <ModeToggle/>
       <h1>{t("welcome")}</h1>
       <code style={{whiteSpace:'pre-wrap'}}>
         {YMLdata}

@@ -1,7 +1,8 @@
 {
   "welcome": "Welcome",
-  "theme":{
+  "theme": {
     "dark": "Dark",
-    "light": "Light"
+    "light": "Light",
+    "system": "System"
   }
 }
