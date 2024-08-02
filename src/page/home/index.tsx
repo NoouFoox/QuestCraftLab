@@ -1,9 +1,16 @@
 import { ModeToggle } from "@/components/system/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { SheetTrigger, Sheet, SheetContent } from "@/components/ui/sheet";
+import {
+  SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetHeader,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { t } from "i18next";
 import yaml from "js-yaml";
-import { Menu, Package2 } from "lucide-react";
+import { Menu, Pickaxe } from "lucide-react";
 const JSONdata = {
   name: {
     title: "任务",
@@ -22,7 +29,6 @@ const YMLdata = yaml.dump(JSONdata);
 export default function Home() {
   console.log(YMLdata);
   console.log(yaml.load(YMLdata));
-
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
@@ -31,7 +37,7 @@ export default function Home() {
             href="/"
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
-            <Package2 className="h-6 w-6" />
+            <Pickaxe className="h-6 w-6"/>
           </a>
           {["home", "about", "contact"].map((nav) => (
             <a
@@ -55,6 +61,10 @@ export default function Home() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
+            <SheetHeader>
+              <SheetDescription>Description goes here</SheetDescription>
+            </SheetHeader>
+            <SheetTitle>Menu</SheetTitle>
             <nav className="grid gap-6 text-lg font-medium">
               {["home", "about", "contact"].map((nav) => (
                 <a
