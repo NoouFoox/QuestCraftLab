@@ -1,6 +1,11 @@
 {
   "welcome": "Welcome",
-  "lang":"English",
+  "lang": "English",
+  "ui": {
+    "home": "Home",
+    "plugins": "plugins",
+    "about": "About"
+  },
   "theme": {
     "dark": "Dark",
     "light": "Light",

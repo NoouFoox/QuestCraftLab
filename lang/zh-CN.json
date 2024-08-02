@@ -1,6 +1,11 @@
 {
   "welcome": "欢迎",
-  "lang":"简体中文",
+  "lang": "简体中文",
+  "ui": {
+    "home": "首页",
+    "plugins": "插件",
+    "about": "关于"
+  },
   "theme": {
     "dark": "暗",
     "light": "亮",
