@@ -1,5 +1,4 @@
-import ThemeButton from "@/component/system/ThemeButton";
-import Button from "@/component/ui/Button";
+import { Button } from "@/components/ui/button";
 import { t } from "i18next";
 import yaml from "js-yaml";
 const JSONdata = {
@@ -23,9 +22,8 @@ export default function Home() {
 
   return (
     <div>
+      <Button>按钮</Button>
       <h1>{t("welcome")}</h1>
-      <Button>Click me</Button>
-      <ThemeButton />
       <code style={{whiteSpace:'pre-wrap'}}>
         {YMLdata}
       </code>
