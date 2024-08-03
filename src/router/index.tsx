@@ -1,14 +1,36 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import HomeLayout from "@/components/layout/home-layout";
 import Home from "@/page/home";
-export const mainRoutes: RouteObject[] = [
+type RouterMeta = {
+  meta?: {
+    name: string;
+  };
+};
+type CustomRouteObject = RouteObject & RouterMeta;
+export const mainRoutes: CustomRouteObject[] = [
   {
     path: "/",
+    meta: {
+      name: "home",
+    },
     element: <Home />,
   },
+  {
+    path: "/plugins",
+    meta: {
+      name: "plugins",
+    },
+    element: <div>plugins</div>,
+  },
+  {
+    path: "/about",
+    meta: {
+      name: "about",
+    },
+    element: <div>about</div>,
+  },
 ];
-
-const routes: RouteObject[] = [
+const routes: CustomRouteObject[] = [
   {
     path: "/",
     element: <HomeLayout />,

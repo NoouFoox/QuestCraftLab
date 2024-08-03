@@ -9,12 +9,23 @@ import {
   SheetDescription,
   SheetTitle,
 } from "@/components/ui/sheet";
-
+import useRoute from "@/lib/use/useRoute";
+import { mainRoutes } from "@/router";
+import clsx from "clsx";
 import { Pickaxe, Menu } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
+type _RouterLangType = "ui.home" | "ui.about" | "ui.plugins";
 export default function HomeHeader() {
   const { t } = useTranslation();
+  const route = useRoute();
+  const linkClass = (routerPath: string) =>
+    clsx(
+      { "text-foreground/50": route?.path !== routerPath },
+      "transition-colors hover:text-foreground/80 "
+    );
+
+  console.log(route);
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
@@ -24,14 +35,14 @@ export default function HomeHeader() {
         >
           <Pickaxe className="h-6 w-6" />
         </a>
-        {["home", "plugins", "about"].map((nav) => (
-          <a
-            href="#"
-            key={nav}
-            className="text-foreground transition-colors hover:text-foreground text-nowrap"
+        {mainRoutes.map((nav) => (
+          <Link
+            to={nav.path || "/"}
+            key={nav.path}
+            className={linkClass(nav.path!)}
           >
-            {t(`ui.${nav}` as "ui.home" | "ui.about" | "ui.plugins")}
-          </a>
+            {t(`ui.${nav.meta!.name}` as _RouterLangType)}
+          </Link>
         ))}
       </nav>
       <Sheet>
@@ -47,10 +58,14 @@ export default function HomeHeader() {
           </SheetHeader>
           <SheetTitle>Menu</SheetTitle>
           <nav className="grid gap-6 text-lg font-medium">
-            {["home", "plugins", "about"].map((nav) => (
-              <a href="#" key={nav} className="hover:text-foreground">
-                {t(`ui.${nav}` as "ui.home" | "ui.about" | "ui.plugins")}
-              </a>
+            {mainRoutes.map((nav) => (
+              <Link
+                to={nav.path || "/"}
+                key={nav.path}
+                className={linkClass(nav.path!)}
+              >
+                {t(`ui.${nav.meta!.name}` as _RouterLangType)}
+              </Link>
             ))}
           </nav>
         </SheetContent>
