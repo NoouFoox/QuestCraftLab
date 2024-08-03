@@ -22,7 +22,7 @@ export default function HomeHeader() {
   const linkClass = (routerPath: string) =>
     clsx(
       { "text-foreground/50": route?.path !== routerPath },
-      "transition-colors hover:text-foreground/80 "
+      "text-nowrap transition-colors hover:text-foreground/80"
     );
 
   console.log(route);
