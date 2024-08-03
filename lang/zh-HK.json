@@ -6,6 +6,9 @@
     "plugins": "插件",
     "about": "關於"
   },
+  "system": {
+    "menu": "菜單"
+  },
   "theme": {
     "dark": "暗",
     "light": "亮",

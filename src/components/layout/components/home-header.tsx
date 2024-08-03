@@ -24,8 +24,6 @@ export default function HomeHeader() {
       { "text-foreground/50": route?.path !== routerPath },
       "text-nowrap transition-colors hover:text-foreground/80"
     );
-
-  console.log(route);
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
@@ -54,9 +52,9 @@ export default function HomeHeader() {
         </SheetTrigger>
         <SheetContent side="left">
           <SheetHeader>
-            <SheetDescription>Description goes here</SheetDescription>
+            <SheetDescription className="sr-only">Description goes here</SheetDescription>
           </SheetHeader>
-          <SheetTitle>Menu</SheetTitle>
+          <SheetTitle>{t('system.menu')}</SheetTitle>
           <nav className="grid gap-6 text-lg font-medium">
             {mainRoutes.map((nav) => (
               <Link

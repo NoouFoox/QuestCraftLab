@@ -6,6 +6,9 @@
     "plugins": "plugins",
     "about": "About"
   },
+  "system": {
+    "menu": "Menu"
+  },
   "theme": {
     "dark": "Dark",
     "light": "Light",
