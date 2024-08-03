@@ -7,7 +7,10 @@
     "about": "关于"
   },
   "system": {
-    "menu": "菜单"
+    "menu": "菜单",
+    "add": {
+      "quest": "添加任务"
+    }
   },
   "theme": {
     "dark": "暗",

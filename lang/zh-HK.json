@@ -7,7 +7,10 @@
     "about": "關於"
   },
   "system": {
-    "menu": "菜單"
+    "menu": "菜單",
+    "add": {
+      "quest": "添加任務"
+    }
   },
   "theme": {
     "dark": "暗",
