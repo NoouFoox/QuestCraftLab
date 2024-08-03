@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
-import { t } from "i18next";
-
+import useLang from "@/lib/use/useLang";
 export default function LangToggle() {
-  const { i18n } = useTranslation();
+  const { changeLang } = useLang();
+  const { t } = useTranslation();
+  
   return (
     <>
       <DropdownMenu>
@@ -23,10 +24,10 @@ export default function LangToggle() {
         <DropdownMenuContent align="end">
           {Object.keys(lngs).map((lng) => (
             <DropdownMenuItem
-              onClick={() => i18n.changeLanguage(lng)}
+              onClick={() =>changeLang(lng)}
               key={lng}
             >
-              {lng}
+              {lngs[lng].nativeName}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>

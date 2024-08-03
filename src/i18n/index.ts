@@ -11,7 +11,7 @@ i18next
   .use(initReactI18next)
   .init({
     debug: true,
-    fallbackLng: 'en-US',
+    fallbackLng: localStorage.getItem("lang")||'en-US',
     interpolation: {
       escapeValue: false,
     },
