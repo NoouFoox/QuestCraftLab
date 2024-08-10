@@ -16,5 +16,11 @@
     "dark": "暗",
     "light": "亮",
     "system": "系統"
+  },
+  "quest":{
+    "default": {
+      "title": "新任務",
+      "description": "新任務描述"
+    }
   }
 }

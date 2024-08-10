@@ -16,5 +16,11 @@
     "dark": "Dark",
     "light": "Light",
     "system": "System"
+  },
+  "quest":{
+    "default": {
+      "title": "New Quest",
+      "description": "New Quest Description"
+    }
   }
 }
