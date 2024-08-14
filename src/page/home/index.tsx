@@ -5,9 +5,7 @@ import { Plus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { ReactNode, useEffect, useState } from "react";
 import dayjs from "dayjs";
-
 const getAllQuests = async () => (await db.quests.toArray()).reverse();
-
 export default function Home() {
   const { t } = useTranslation();
   const [quests, setQuests] = useState<Array<Quest>>([]);
